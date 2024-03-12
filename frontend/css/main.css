@@ -58,6 +58,7 @@ main {
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 }
+
 .write-btn:hover {
-  background-color: var(-button-hover);
+  background-color: var(--button-hover);
 }

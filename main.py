@@ -11,12 +11,6 @@ cur = con.cursor()
 app = FastAPI()
 
 
-
-
-
-
-
-
 @app.post('/items')
 async def create_item(image:UploadFile,
                 title: Annotated[str, Form()],
@@ -46,6 +40,7 @@ async def get_items():
                        """).fetchall()
 
     return JSONResponse(jsonable_encoder(dict(row) for row in rows))
+
     
 app.mount("/", StaticFiles(directory="frontend",html=True), name="frontend")  
 
